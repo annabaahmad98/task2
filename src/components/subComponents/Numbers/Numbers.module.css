@@ -1,0 +1,23 @@
+.numbersContainer {
+    display: flex;
+    margin-top: 2rem;
+    background: var(--orange-95);
+    padding: 1rem 2rem;
+    border: 1px solid var(--gray-15);
+    border-radius: .5rem;
+    box-shadow: 8px 8px 0px 1px var(--orange-80);
+    width: 100%;
+}
+.numbersItemContainer{
+    margin: 0 1rem;
+}
+.numbersText {
+    font-size: 12px;
+    color: var(--gray-15);
+}
+
+.numbersValue {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--gray-15);
+}

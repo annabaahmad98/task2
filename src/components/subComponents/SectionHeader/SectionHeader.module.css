@@ -1,0 +1,37 @@
+.sectionHeaderContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sectionBadge {
+    padding: .5rem .75rem;
+    background: var(--white-00);
+    border: 1px solid var(--gray-15);
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.sectionTitle {
+    margin: 1rem 0;
+
+    span {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--gray-15);
+        font-family: 'Raleway', sans-serif;
+
+    }
+}
+
+.sectionDescription {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+
+    span {
+        color: var(--gray-20);
+        font-size: 14px;
+    }
+}

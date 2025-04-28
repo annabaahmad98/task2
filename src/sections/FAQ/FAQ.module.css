@@ -1,0 +1,58 @@
+/* FAQ Container: Flex layout to display left and right columns */
+.faqContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap to next line if space is insufficient */
+}
+
+/* Left and Right Columns */
+.leftColumn, .rightColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 48%; /* Adjust width for the columns */
+}
+
+/* FAQ Item (closed) */
+.faqItem {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+    padding: 20px 40px; /* Adjust padding for better spacing */
+    gap: 15px; /* Space between question and answer */
+    
+    width: 100%; /* Full width within the column */
+    background: #FFEFE6;
+    border: 2px solid #262626;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* When item is active (open) */
+.faqItem.active {
+    background: #FFFFFF;
+    border: 2px solid #262626;
+    border-radius: 12px;
+    padding: 40px;
+}
+
+/* FAQ Question text */
+.faqQuestion {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #262626;
+    text-decoration: none;
+    border-bottom: 2px solid #262626; /* Bold line under the question */
+    padding-bottom: 5px; /* Space between question and the line */
+    margin-bottom: 10px; /* Space between the line and the answer */
+}
+
+/* FAQ Answer text */
+.faqAnswer {
+    font-size: 1rem;
+    color: #555;
+    width: 100%;
+}

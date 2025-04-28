@@ -1,0 +1,45 @@
+:root {
+    --orange-90: #FFDECC;
+    --orange-95: #FFEFE5;
+    --orange-97: #FFF5F0;
+    --orange-80: #FFBE99;
+    --orange-75: #FFAE80;
+    --orange-65: #FF8D4D;
+    --gray-10: #1A1A1A;
+    --gray-13: #1e1e1e;
+    --gray-15: #262626;
+    --gray-20: #333333;
+    --gray-30: #4C4C4D;
+    --white-00: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 1rem 2rem;
+    background-color: var(--orange-97);
+    font-family: 'Outfit', sans-serif;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('../assets/fonts/Outfit-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../assets/fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

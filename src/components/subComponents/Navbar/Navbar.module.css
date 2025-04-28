@@ -1,0 +1,62 @@
+.navbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--gray-15);
+    border-radius: .5rem;
+    height: 50px;
+    overflow: hidden;
+}
+
+.navbarHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background-color: var(--orange-65);
+    border-right: 1px solid var(--gray-15);
+    padding: 1rem;
+    height: 100%;
+    color: var(--gray-15);
+    text-transform: capitalize;
+
+}
+
+.navbarLogo {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.listContainer {
+    height: 100%;
+    background-color: var(--white-00);
+    flex: 1;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 0;
+        height: 100%;
+
+        .liItem {
+            list-style-type: none;
+            border-left: 1px solid var(--gray-15);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-15);
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .liItem:last-child {
+            background-color: var(--orange-75);
+        }
+    }
+}
+
+.liActive {
+    background-color: var(--orange-95) !important;
+}
