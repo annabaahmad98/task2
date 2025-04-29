@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <>
             <Banner text='Admission is Open, Grab your seat now' icon={arrow} />
-            <Navbar text="Little Listners" logo={logo} listItems={['Home', 'About Us', 'Academics', 'Admissions', 'Student Life', 'Contact']} />
+            <Navbar text="Little Learners" logo={logo} listItems={['Home', 'About Us', 'Academics', 'Admissions', 'Student Life', 'Contact']} />
         </>
     )
 }

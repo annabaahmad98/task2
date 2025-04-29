@@ -10,7 +10,7 @@ export default function Banner({ text, icon }) {
                 <img src={bgImageStart} />
             </div>
             <div className={styles.bannerContent}>
-                <p>{text}</p>
+                <p className='fs-8'>{text}</p>
                 <div className={styles.bannerArrow}>
                     <img src={icon} />
                 </div>

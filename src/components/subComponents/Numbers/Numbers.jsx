@@ -7,8 +7,8 @@ export default function Numbers({listItems}) {
             {listItems.map((item, index) => {
                 return (
                     <div className={styles.numbersItemContainer} key={index}>
-                        <div className={styles.numbersValue}>{item.number}</div>
-                        <div className={styles.numbersText}>{item.text}</div>
+                        <h2 className={styles.numbersValue}>{item.number}</h2>
+                        <div className={`${styles.numbersText} fs-8`}>{item.text}</div>
                     </div>
                 )
             })}

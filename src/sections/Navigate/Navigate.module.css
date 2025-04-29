@@ -1,264 +1,95 @@
-/* Container Styles */
-/* Container Styles */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20px; /* Adjust padding for consistency */
-    gap: 50px; /* Adjust the gap between elements */
-    width: 100%;
-    max-width: 1596px;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  gap: 50px;
+  width: 100%;
+  max-width: 1596px;
+  margin: 0 auto;
 }
 
-/* Card Styles */
 .card {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 40px; /* Reduced padding for consistency */
-    gap: 40px; /* Adjusted gap */
-    width: 100%;
-    max-width: 773px; /* Keeps card width fixed */
-    background: #ffffff;
-    border: 2px solid #262626;
-    box-shadow: 6px 6px 0px 2px #1e1e1e;
-    border-radius: 12px;
-    flex: none;
-    order: 0;
+  padding: 1rem;
+  width: 50%;
+  height: 400px;
 }
-  
-  /* Subcontainer Styles */
-  .subContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 50px;
-    width: 1596px;
-    height: 1226px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-  }
-  
-  /* Items Container */
-  .itemsContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 50px;
-    width: 1596px;
-    height: 588px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-  }
-  
-  
-  /* Card Container */
-  .cardContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 50px;
-    width: 613px;
-    height: 282px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-  }
-  
-  /* Card Subcontainer */
-  .cardSubContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 30px;
-    width: 613px;
-    height: 112px;
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-  }
-  
-  /* Card Heading */
-  .cardHeading {
-    width: 613px;
-    height: 62px;
-    font-family: Raleway, sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 130%;
-    text-align: center;
-    color: #1a1a1a;
-    margin: 0;
-  }
-  
-  /* Rating Container */
-  .ratingContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 10px;
-    width: 613px;
-    height: 20px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-  }
-  
-  /* Rating Subcontainer */
-  .ratingSubContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    width: 93.83px;
-    height: 20px;
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-    z-index: 5;
-  }
-  
-  /* Rating Shape */
-  .ratingShape {
-    width: 20px;
-    height: 20px;
-    background: #ffffff;
-    border: 2px solid #262626;
-    margin: 0px -6px;
-    z-index: 1;
-  }
-  
-  /* Rating Line Container */
-  .ratingLineContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 6px 6px 0px;
-    gap: 10px;
-    width: 79.83px;
-    height: 12px;
-    background: #ffbe99;
-    flex: none;
-    order: 1;
-    flex-grow: 1;
-    z-index: 0;
-  }
-  
-  /* Rating Line */
-  .ratingLine {
-    width: 73.83px;
-    height: 0px;
-    border: 2px solid #000000;
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-  }
-  
-  /* Rating End Container */
-  .ratingEndContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    width: 93.83px;
-    height: 20px;
-    flex: none;
-    order: 5;
-    flex-grow: 1;
-    z-index: 0;
-  }
-  
-  /* Rating End Line Container */
-  .ratingEndLineContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 6px 6px 6px 0px;
-    gap: 10px;
-    width: 76.83px;
-    height: 12px;
-    background: #ffbe99;
-    flex: none;
-    order: 0;
-    flex-grow: 1;
-    margin: 0px -3px;
-  }
-  
-  /* Card Paragraph */
-  .cardParagraph {
-    width: 613px;
-    height: 120px;
+
+.navigateContainer {
+  margin-top: 3rem;
+}
+
+
+.itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray-15);
+  border-radius: .5rem;
+  box-shadow: 3px 3px 0px 2px var(--gray-15);
+  background-color: var(--white-00);
+  padding: 3rem;
+  height: 100%;
+}
+
+.cardHeading {
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  color: var(--gray-10);
+}
+
+.cardParagraph {
+  text-align: center;
+  color: var(--gray-30);
+  margin: 2rem 0;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-wrap;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.cardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  width: 100%;
+  background: var(--orange-90);
+  border: 1px solid var(--gray-15);
+  box-shadow: 2px 2px 0px 1px var(--gray-15);
+  border-radius: .25rem;
+  padding: .5rem;
+  cursor: pointer;
+  color: var(--gray-20);
+
+  span {
     font-family: Outfit, sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 150%;
-    text-align: center;
-    color: #4c4c4d;
-    margin: 0;
   }
-  
-  /* Card Button */
-  .cardButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 18px 0px;
-    gap: 10px;
-    width: 613px;
-    height: 66px;
-    background: #ffdecc;
-    border: 2px solid #262626;
-    box-shadow: 4px 4px 0px 2px #1e1e1e;
-    border-radius: 10px;
-    cursor: pointer;
+}
+
+.buttonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.borderContainer {
+  img {
+    object-fit: contain;
   }
-  
-  /* Button Text */
-  .buttonText {
-    width: 103px;
-    height: 30px;
-    font-family: Outfit, sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 150%;
-    text-align: center;
-    color: #333333;
+}
+
+@media(max-width:576px) {
+  .card {
+    width: 100% !important;
   }
-  
-  /* Button Icon */
-  .buttonIcon {
-    width: 30px;
-    height: 30px;
-    position: relative;
-  }
-  
-  /* Button Vector */
-  .buttonVector {
-    position: absolute;
-    left: 15%;
-    right: 25%;
-    top: 80%;
-    bottom: -50%;
-    background: #262626;
-    transform: rotate(-90deg);
-  }
-  
+}

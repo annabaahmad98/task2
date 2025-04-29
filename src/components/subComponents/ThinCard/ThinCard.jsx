@@ -4,19 +4,20 @@ import styles from './ThinCard.module.css'
 export default function ThinCard({ avatar, title, icon, description, style, stars }) {
     return (
         <div className={styles.cardConatiner}>
-            <div>
-                <img src={avatar} alt="Avatar" style={{ width: '80px', height: '80px', borderRadius: '50%' }} />
+            <div className={styles.cardAvatar}>
+                <img src={avatar} alt="Avatar"/>
             </div>
-            <span style={{ fontWeight: 'bold', fontSize: '1.2rem', marginTop: '10px' }}>{title}</span>
+            <span className={`${styles.cardTitle} fs-6`}>{title}</span>
             
-            {/* Stars Section */}
-            <div style={{ display: 'flex', gap: '5px', marginTop: '10px' }}>
+            <div className={styles.starsContainer}>
                 {[...Array(stars)].map((_, i) => (
-                    <img key={i} src={icon} alt="Star" style={{ width: '20px', height: '20px' }} />
+                    <div className={styles.starItem}>
+                    <img key={i} src={icon} alt="Star" />
+                    </div>
                 ))}
             </div>
 
-            <p style={{ marginTop: '15px', textAlign: 'center' }}>{description}</p>
+            <p className={`${styles.cardDescription} fs-7`}>{description}</p>
         </div>
     );
 }

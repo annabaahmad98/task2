@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import SectionHeader from "../../components/subComponents/SectionHeader/SectionHeader";
 import styles from "./FAQ.module.css";
+import plus from '../../assets/images/icons/plus.png'
+import minus from '../../assets/images/icons/minus.png'
 
-const faqDataLeft = [
+const faqData = [
   {
     question: "What are the school hours at Little Learners Academy?",
     answer:
-    "Our school hours are from 8:00 AM to 3:00 PM, Monday to Friday. We also offer extended care options for parents who need early drop-off or late pick-up."
-},
+      "Our school hours are from 8:00 AM to 3:00 PM, Monday to Friday. We also offer extended care options for parents who need early drop-off or late pick-up."
+  },
   {
     question: "Is there a uniform policy for students?",
     answer:
@@ -23,9 +25,6 @@ const faqDataLeft = [
     answer:
       "You can schedule a visit by contacting our admissions office through phone or filling out the form on our website.",
   },
-];
-
-const faqDataRight = [
   {
     question: "How do you handle food allergies and dietary restrictions?",
     answer:
@@ -48,59 +47,46 @@ const faqDataRight = [
   },
 ];
 
+
 export default function FAQ() {
-  const [activeIndexLeft, setActiveIndexLeft] = useState(null);
-  const [activeIndexRight, setActiveIndexRight] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const toggleQuestionLeft = (index) => {
-    setActiveIndexLeft((prevIndex) => (prevIndex === index ? null : index));
-  };
-
-  const toggleQuestionRight = (index) => {
-    setActiveIndexRight((prevIndex) => (prevIndex === index ? null : index));
+  const toggleQuestion = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
-    <>
+    <div className="main-section-container">
       <SectionHeader
         badgeText="Solutions For The Doubts"
         headerText="Frequently Asked Questions"
         descriptionText="Find all the essential information you need in our FAQ section, designed to address the most frequently asked questions and help you make informed decisions for your child's education."
       />
       <div className={styles.faqContainer}>
-        <div className={styles.leftColumn}>
-          {faqDataLeft.map((item, index) => (
-            <div
-              key={index}
-              className={`${styles.faqItem} ${
-                activeIndexLeft === index ? styles.active : ""
-              }`}
-              onClick={() => toggleQuestionLeft(index)}
-            >
-              <div className={styles.faqQuestion}>{item.question}</div>
-              {activeIndexLeft === index && (
-                <div className={styles.faqAnswer}>{item.answer}</div>
-              )}
-            </div>
-          ))}
-        </div>
-        <div className={styles.rightColumn}>
-          {faqDataRight.map((item, index) => (
-            <div
-              key={index}
-              className={`${styles.faqItem} ${
-                activeIndexRight === index ? styles.active : ""
-              }`}
-              onClick={() => toggleQuestionRight(index)}
-            >
-              <div className={styles.faqQuestion}>{item.question}</div>
-              {activeIndexRight === index && (
-                <div className={styles.faqAnswer}>{item.answer}</div>
-              )}
+        <div className={styles.faqColumn}>
+          {faqData.map((item, index) => (
+            <div className={styles.faqQuestionContainer}>
+              <div
+                key={index}
+                className={`${styles.faqItem} ${activeIndex === index ? styles.active : ""
+                  }`}
+                onClick={() => toggleQuestion(index)}
+              >
+                <div>
+                  <div className={`${styles.faqQuestion} fs-6`}>{item.question}</div>
+                  {activeIndex === index && (
+                    <div className={`${styles.faqAnswer} fs-7`}>{item.answer}</div>
+                  )}
+                </div>
+                <div className={styles.faqIcon}>
+                  <img src={`${activeIndex === index ? minus : plus}`} />
+                </div>
+              </div>
+
             </div>
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

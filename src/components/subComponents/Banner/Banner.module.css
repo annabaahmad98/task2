@@ -4,7 +4,7 @@
     justify-content: center;
     gap: .5rem;
     border: 1px solid #262626;
-    border-radius: 5px;
+    border-radius: .25rem;
     height: 35px;
     background-color: var(--orange-90);
     position: relative;
@@ -46,7 +46,6 @@
 
     & p {
         margin: 0;
-        font-size: 12px;
         display: -webkit-box !important;
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
@@ -54,8 +53,6 @@
         text-overflow: ellipsis;
         white-space: pre-wrap;
         text-transform: capitalize;
-
-
     }
 
     & .bannerArrow {

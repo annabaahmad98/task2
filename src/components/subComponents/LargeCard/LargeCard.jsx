@@ -7,8 +7,8 @@ export default function LargeCard({ icon, title, description }) {
             <div className={styles.cardIcon}>
                 <img src={icon} />
             </div>
-            <span className={styles.cardTitle}>{title}</span>
-            <p  className={styles.cardDescription}>{description}</p>
+            <span className={`${styles.cardTitle} fs-6`}>{title}</span>
+            <p  className={`${styles.cardDescription} fs-7`}>{description}</p>
         </div>
     )
 }

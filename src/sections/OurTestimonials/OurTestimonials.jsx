@@ -13,14 +13,14 @@ export default function OurTestimonials() {
 
   const titles = ["Jennifer B", "David K", "Emily L", "Sarah M", "Chris P", "Anna R"];
   const descriptions = [
-    `Little Learners Academy has been a second home for my child.`,
-    `Choosing Little Learners Academy for my daughter was the best decision.`,
+    `Little Learners Academy has been a second home for my child. The caring staff and engaging programs have made her excited to go to school every day!`,
+    `Choosing Little Learners Academy for my daughter was the best decision. She has thrived in their nurturing and stimulating environment.`,
     `My son's social and academic growth has been remarkable.`,
     `Wonderful environment with caring teachers.`,
-    `Amazing learning experience for my child.`,
+    `My son's social and academic growth has been remarkable since joining Little Learners Academy. I am grateful for the supportive and dedicated teachers.`,
     `Highly recommend Little Learners Academy!`,
   ];
-  const stars = [5, 5, 5, 4, 5, 4];
+  const stars = [5, 3, 4, 4, 2, 4];
 
   const itemsPerPage = 3;
   const totalPages = Math.ceil(titles.length / itemsPerPage);
@@ -33,7 +33,7 @@ export default function OurTestimonials() {
     setCurrentPage((prevPage) => (prevPage - 1 + totalPages) % totalPages);
   };
   return (
-    <>
+    <div className="main-section-container">
       <SectionHeader
         badgeText="Their Happy Words 🤗"
         headerText="Our Testimonials"
@@ -41,19 +41,14 @@ export default function OurTestimonials() {
       />
 
       <div className={styles.mainContainer}>
-
         <button onClick={handlePrev} className={styles.sliderBtn}>
           <img src={arrowleft} />
         </button>
-        <div style={{
-          overflow: 'hidden',
-        }}>
+        <div className={styles.sliderContainer}>
           <div className={styles.cardsContainer} style={{
             transform: `translateX(-${currentPage * (350 * itemsPerPage + 2 * (itemsPerPage - 1) * 16)}px)`,
-            padding: '1rem',
           }}>
             {titles.map((title, index) => (
-
               <ThinCard
                 key={index}
                 avatar={avatar}
@@ -61,18 +56,15 @@ export default function OurTestimonials() {
                 icon={star}
                 description={descriptions[index]}
                 stars={stars[index]}
-
               />
-
             ))}
           </div>
         </div>
 
         <button onClick={handleNext} className={styles.sliderBtn}>
           <img src={arrowright} />
-
         </button>
       </div>
-    </>
+    </div>
   );
 }

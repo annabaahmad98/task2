@@ -2,7 +2,7 @@
     width: 30%;
     background: var(--white-00);
     border: 1px solid var(--gray-15);
-    border-radius: 8px;
+    border-radius: .5rem;
     position: relative;
     padding: 2rem;
     box-shadow: 3px 3px 0px 2px var(--gray-13);
@@ -17,19 +17,32 @@
     top: -13%;
     background: var(--orange-90);
     border: 1px solid var(--gray-15);
-    border-radius: 8px;
+    border-radius: .5rem;
     padding: .75rem;
     left: 5%;
 }
-.cardTitle{
-    font-weight: bold;
+
+.cardTitle {
+    font-weight: bolder;
     color: var(--gray-10);
     margin-top: 1rem;
     display: inline-flex;
     font-family: 'Raleway', sans-serif;
 
 }
-.cardDescription{
-    font-size: 14px;
+
+.cardDescription {
     color: var(--gray-20);
+}
+
+@media(max-width:768px) {
+    .cardContainer{
+        min-width: 45% !important;
+    }
+}
+
+@media(max-width:576px) {
+    .cardContainer{
+        width: 100% !important;
+    }
 }

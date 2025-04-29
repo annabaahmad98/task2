@@ -1,106 +1,55 @@
 import React from "react";
 import SectionHeader from "../../components/subComponents/SectionHeader/SectionHeader";
 import styles from "./Navigate.module.css";
+import border from '../../assets/images/border.png'
+import arrow from '../../assets/images/icons/arrow.png'
 
 const cardData = [
   {
-    heading: "Heading 1",
-    paragraph: "Paragraph text goes here describing the card content.",
-    buttonText: "Button 1",
+    heading: "About Us",
+    paragraph: "Peek into the vibrant and enriching world of Student Life at Little Learners Academy. Discover the array of extracurricular activities, arts and crafts, sports, and social events that make our school experience truly memorable.",
+    buttonText: "Learn More",
   },
   {
-    heading: "Heading 2",
-    paragraph: "Paragraph text goes here describing the card content.",
-    buttonText: "Button 2",
+    heading: "Academics",
+    paragraph: "Discover our Mission, Values, and our unwavering commitment to providing the best learning experience for your child. Learn about our passionate educators and our engaging approach to early education.",
+    buttonText: "Learn More",
   },
   {
-    heading: "Heading 3",
-    paragraph: "Paragraph text goes here describing the card content.",
-    buttonText: "Button 3",
+    heading: "Student Life",
+    paragraph: "Delve into our comprehensive academic programs designed to stimulate young minds, foster creativity, and encourage a love for learning. Explore our well-rounded curriculum that nurtures both intellectual and social development.",
+    buttonText: "Learn More",
   },
   {
-    heading: "Heading 4",
-    paragraph: "Paragraph text goes here describing the card content.",
-    buttonText: "Button 4",
+    heading: "Admissions",
+    paragraph: "Learn about our Enrollment Process and how to secure your child's place at Little Learners Academy. Find information about our admission requirements, application deadlines, and available spaces.",
+    buttonText: "Learn More",
   },
 ];
 
 const Navigate = () => {
   return (
-    <div className={styles.container}>
+    <div className="main-section-container">
       <SectionHeader
+        badgeText="Explore More"
         headerText="Navigate through our Pages"
         descriptionText="Your gateway to discovering a wealth of valuable information about our kindergarten school, Feel free to explore and learn more about the enriching experiences that await your child at our kindergarten school"
       />
-      
-      <div className={styles.subContainer}>
-        <div className={styles.itemsContainer}>
-          {/* First Row */}
-          {cardData.slice(0, 2).map((card, index) => (
-            <div key={index} className={styles.card}>
-              <div className={styles.cardContainer}>
-                <div className={styles.cardSubContainer}>
-                  <h2 className={styles.cardHeading}>{card.heading}</h2>
-                  <div className={styles.ratingContainer}>
-                    {/* Rating line with circles */}
-                    {[1, 2, 3, 4, 5].map((_, index) => (
-                      <div key={index} className={styles.ratingSubContainer}>
-                        <div className={styles.ratingShape}></div>
-                        <div className={styles.ratingLineContainer}>
-                          <div className={styles.ratingLine}></div>
-                        </div>
-                      </div>
-                    ))}
-                    <div className={styles.ratingEndContainer}>
-                      <div className={styles.ratingEndLineContainer}>
-                        <div className={styles.ratingLine}></div>
-                      </div>
-                      <div className={styles.ratingShape}></div>
-                    </div>
-                  </div>
-                </div>
-                <p className={styles.cardParagraph}>{card.paragraph}</p>
-                <button className={styles.cardButton}>
-                  <span className={styles.buttonText}>{card.buttonText}</span>
-                  <div className={styles.buttonIcon}>
-                    <div className={styles.buttonVector}></div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Second Row */}
+      <div className={styles.navigateContainer}>
         <div className={styles.itemsContainer}>
-          {cardData.slice(2, 4).map((card, index) => (
+          {cardData.slice(0, 4).map((card, index) => (
             <div key={index} className={styles.card}>
-              <div className={styles.cardContainer}>
-                <div className={styles.cardSubContainer}>
-                  <h2 className={styles.cardHeading}>{card.heading}</h2>
-                  <div className={styles.ratingContainer}>
-                    {/* Rating line with circles */}
-                    {[1, 2, 3, 4, 5].map((_, index) => (
-                      <div key={index} className={styles.ratingSubContainer}>
-                        <div className={styles.ratingShape}></div>
-                        <div className={styles.ratingLineContainer}>
-                          <div className={styles.ratingLine}></div>
-                        </div>
-                      </div>
-                    ))}
-                    <div className={styles.ratingEndContainer}>
-                      <div className={styles.ratingEndLineContainer}>
-                        <div className={styles.ratingLine}></div>
-                      </div>
-                      <div className={styles.ratingShape}></div>
-                    </div>
-                  </div>
+              <div className={styles.cardContent}>
+                <h2 className={styles.cardHeading}>{card.heading}</h2>
+                <div className={styles.borderContainer}>
+                  <img src={border} />
                 </div>
-                <p className={styles.cardParagraph}>{card.paragraph}</p>
-                <button className={styles.cardButton}>
-                  <span className={styles.buttonText}>{card.buttonText}</span>
+                <p className={`${styles.cardParagraph} fs-7`}>{card.paragraph}</p>
+                <button className={`${styles.cardButton} fs-7`}>
+                  <span>{card.buttonText}</span>
                   <div className={styles.buttonIcon}>
-                    <div className={styles.buttonVector}></div>
+                    <img src={arrow}/>
                   </div>
                 </button>
               </div>

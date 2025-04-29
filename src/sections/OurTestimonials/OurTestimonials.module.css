@@ -5,22 +5,26 @@
     gap: 1rem;
     margin-top: 2rem;
 }
+.sliderContainer{
+    overflow: hidden;
+}
 
 .cardsContainer {
     display: flex;
     gap: 2rem;
     transition: transform 0.5s ease;
+    padding: 1rem;
 }
 
 .sliderBtn {
     background: var(--white-00);
     border: 1px solid var(--gray-15);
-    border-radius: 8px;
-    width: 50PX;
-    height: 50PX;
+    border-radius: .5rem;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     aspect-ratio: 1 / 1;
-    padding: 2rem;
+    padding: .875rem;
     display: flex;
     align-items: center;
     justify-content: center;

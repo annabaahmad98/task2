@@ -23,7 +23,7 @@ export default function OurBenefits() {
   ];
 
   return (
-    <>
+    <div className='main-section-container'>
       <SectionHeader
         badgeText="Children Deserve Bright Future"
         headerText="Our Benefits"
@@ -39,6 +39,6 @@ export default function OurBenefits() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

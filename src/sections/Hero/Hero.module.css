@@ -4,3 +4,10 @@
     justify-content: center;
     margin-bottom: 3rem;
 }
+
+@media(max-width:768px) {
+    .heroContainer {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

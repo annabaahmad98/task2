@@ -9,15 +9,15 @@ export default function SectionHeader({
   return (
     <div className={styles.sectionHeaderContainer}>
       {badgeText && (
-        <div className={styles.sectionBadge}>
+        <div className={`${styles.sectionBadge} fs-8`}>
           <span>{badgeText}</span>
         </div>
       )}
       <div className={styles.sectionTitle}>
-        <span>{headerText}</span>
+        <h1>{headerText}</h1>
       </div>
-      <div className={styles.sectionDescription}>
-        <span>{descriptionText}</span>
+      <div className={`${styles.sectionDescription} fs-7`}>
+        {descriptionText}
       </div>
     </div>
   );
