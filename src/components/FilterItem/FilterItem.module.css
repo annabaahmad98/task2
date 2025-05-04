@@ -1,0 +1,16 @@
+.fiterItem {
+    padding: .5rem .75rem;
+    background: var(--white-00);
+    border: 1px solid var(--gray-15);
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: var(--orange-90);
+    }
+}

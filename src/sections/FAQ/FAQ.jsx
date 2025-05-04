@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SectionHeader from "../../components/subComponents/SectionHeader/SectionHeader";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import styles from "./FAQ.module.css";
 import plus from '../../assets/images/icons/plus.png'
 import minus from '../../assets/images/icons/minus.png'
@@ -73,7 +73,7 @@ export default function FAQ() {
                 onClick={() => toggleQuestion(index)}
               >
                 <div>
-                  <div className={`${styles.faqQuestion} fs-6`}>{item.question}</div>
+                  <div className="fw-bold fs-6">{item.question}</div>
                   {activeIndex === index && (
                     <div className={`${styles.faqAnswer} fs-7`}>{item.answer}</div>
                   )}

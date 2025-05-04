@@ -1,0 +1,24 @@
+.historyContainer {
+    padding: 5rem;
+}
+
+.historyContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    transform-style: preserve-3d;
+    background: #fff;
+}
+
+.historyBorder {
+    position: absolute;
+    width: 100%;
+    background: red;
+    height: 80%;
+    left: -5%;
+    margin: auto;
+    transform: translateZ(-1px);
+}

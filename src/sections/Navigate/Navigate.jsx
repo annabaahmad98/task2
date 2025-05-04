@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeader from "../../components/subComponents/SectionHeader/SectionHeader";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 import styles from "./Navigate.module.css";
 import border from '../../assets/images/border.png'
 import arrow from '../../assets/images/icons/arrow.png'
@@ -40,8 +40,8 @@ const Navigate = () => {
         <div className={styles.itemsContainer}>
           {cardData.slice(0, 4).map((card, index) => (
             <div key={index} className={styles.card}>
-              <div className={styles.cardContent}>
-                <h2 className={styles.cardHeading}>{card.heading}</h2>
+              <div className={`${styles.cardContent} card-main-layout`}>
+                <h2 className={`${styles.cardHeading} fw-bold`}>{card.heading}</h2>
                 <div className={styles.borderContainer}>
                   <img src={border} />
                 </div>

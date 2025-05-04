@@ -1,0 +1,165 @@
+.footerContainer {
+  padding-bottom: 1rem;
+}
+
+.topSection {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-15);
+  padding-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.topSectionInfo {
+  width: 25%;
+}
+
+.footerHeader {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.footerHeaderLogo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.description {
+  color: var(--gray-30);
+}
+.contactUsContainer{
+  margin-top: 1rem;
+}
+.contactUsContainerItem {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.contactUsIcon {
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1/1;
+  background-color: var(--orange-97);
+  border: 1px solid var(--gray-15);
+  border-radius: .25rem;
+  padding: .35rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  justify-content: space-evenly;
+  flex: 1;
+  margin-bottom: auto;
+}
+
+.linkSection {
+  margin: 0 1rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.linkList li:hover {
+  text-decoration: underline;
+}
+
+.bottomSection {
+  border-bottom: 1px solid var(--gray-15);
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.legalLinks {
+  display: flex;
+}
+
+.legalLinks span {
+  cursor: pointer;
+  padding: 0 .5rem;
+}
+
+.legalLinks span:nth-child(2) {
+  border-right: 1px solid var(--gray-15);
+  border-left: 1px solid var(--gray-15);
+}
+
+.legalLinks span:hover {
+  text-decoration: underline;
+}
+
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.socialIcon {
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1/1;
+  padding: .5rem;
+  background-color: var(--orange-90);
+  border: 1px solid var(--gray-15);
+  border-radius: .25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  color: var(--gray-40);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 576px) {
+  .footerContainer{
+    padding: 1rem;
+  }
+  .topSection{
+    flex-wrap: wrap;
+  }
+  .topSectionInfo{
+    width: 100% !important;
+  }
+  .footerHeader{
+    justify-content: center;
+  }
+  .description{
+    text-align: center;
+  }
+  .links{
+    justify-content: space-between;
+  }
+  .linkSection{
+    margin: 0 ;
+    min-width: 45%;
+    margin-right: .5rem !important;
+  }
+  .bottomSection{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

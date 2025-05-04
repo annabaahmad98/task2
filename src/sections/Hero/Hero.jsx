@@ -1,6 +1,6 @@
 import React from 'react'
-import HeroContent from '../../components/subComponents/HeroContent/HeroContent'
-import ImageContainer from '../../components/subComponents/ImageContainer/ImageContainer'
+import HeroContent from '../../components/HeroContent/HeroContent'
+import ImageContainer from '../../components/ImageContainer/ImageContainer'
 import imageContainer from "../../assets/images/imageContainer.png"
 import styles from './Hero.module.css'
 

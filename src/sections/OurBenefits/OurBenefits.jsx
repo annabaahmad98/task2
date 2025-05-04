@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./OurBenefits.module.css";
-import LargeCard from "../../components/subComponents/LargeCard/LargeCard";
+import LargeCard from "../../components/LargeCard/LargeCard";
 import hat from "../../assets/images/icons/hat.png";
-import SectionHeader from "../../components/subComponents/SectionHeader/SectionHeader";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
 export default function OurBenefits() {
   const titles = [

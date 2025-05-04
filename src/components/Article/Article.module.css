@@ -1,0 +1,32 @@
+.articleContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.bgContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 45%;
+}
+
+.articleInfo {
+    width: 50%;
+     z-index: 2;
+}
+
+.articleHeader {
+    font-family: 'Raleway', sans-serif;
+}
+
+.articleBtn {
+    border: 1px solid var(--gray-15);
+    background-color: var(--white-00);
+    color: var(--gray-15);
+    border-radius: .25rem;
+    padding: .5rem;
+}

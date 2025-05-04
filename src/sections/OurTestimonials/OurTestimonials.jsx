@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import SectionHeader from "../../components/subComponents/SectionHeader/SectionHeader";
-import ThinCard from "../../components/subComponents/ThinCard/ThinCard";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
+import ThinCard from "../../components/ThinCard/ThinCard";
 import avatar from "../../assets/images/avatar.png";
 import star from "../../assets/images/star.png";
 import styles from './OurTestimonials.module.css';
-import arrowleft from '../../assets/images/arrowleft.png'
-import arrowright from '../../assets/images/arrowright.png'
+import RightArrowBtn from "../../components/rightArrowBtn/rightArrowBtn";
+import LeftArrowBtn from "../../components/LeftArrowBtn/LeftArrowBtn";
 
 export default function OurTestimonials() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -41,9 +41,7 @@ export default function OurTestimonials() {
       />
 
       <div className={styles.mainContainer}>
-        <button onClick={handlePrev} className={styles.sliderBtn}>
-          <img src={arrowleft} />
-        </button>
+        <LeftArrowBtn onClick={handlePrev} />
         <div className={styles.sliderContainer}>
           <div className={styles.cardsContainer} style={{
             transform: `translateX(-${currentPage * (350 * itemsPerPage + 2 * (itemsPerPage - 1) * 16)}px)`,
@@ -60,10 +58,7 @@ export default function OurTestimonials() {
             ))}
           </div>
         </div>
-
-        <button onClick={handleNext} className={styles.sliderBtn}>
-          <img src={arrowright} />
-        </button>
+        <RightArrowBtn onClick={handleNext} />
       </div>
     </div>
   );

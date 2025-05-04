@@ -1,7 +1,9 @@
 import './App.css'
-import Body from './components/Body/Body'
-import Footer from './components/Footer/Footer'
-import Header from './components/Header/Header'
+import AboutUs from './pages/AboutUs/AboutUs'
+import Home from './pages/Home/Home'
+import Footer from './sections/Footer/Footer'
+import Header from './sections/Header/Header'
+import Academics from './pages/Academics/Academics'
 
 
 function App() {
@@ -9,7 +11,9 @@ function App() {
   return (
     <>
       <Header />
-      <Body />
+      <Home />
+      <AboutUs />
+      <Academics />
       <Footer />
     </>
   )

@@ -1,0 +1,14 @@
+.cardHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardLogo {
+    width: 3rem;
+    height: 3rem;
+
+    img {
+        object-fit: contain;
+    }
+}

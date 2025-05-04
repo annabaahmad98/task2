@@ -42,12 +42,6 @@
     }
 }
 
-
-.faqQuestion {
-    font-weight: bold;
-}
-
-
 .faqAnswer {
     color: var(--gray-20);
     width: 100%;
